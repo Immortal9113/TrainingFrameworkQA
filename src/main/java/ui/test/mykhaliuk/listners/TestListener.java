@@ -6,8 +6,8 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-import ui.test.Base;
-import ui.test.BaseTest;
+import ui.test.common.Base;
+import ui.test.common.BaseTest;
 
 public class TestListener extends Base implements ITestListener {
 

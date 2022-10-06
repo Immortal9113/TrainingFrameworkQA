@@ -1,8 +1,9 @@
-package ui.test;
+package ui.test.common;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -12,14 +13,15 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 public class BaseTest extends Base {
-
+    String loggerConfPath = "src/main/java/ui/test/common/logger.properties";
     private final Logger logger = LogManager.getLogger(BaseTest.class);
     protected WebDriver driver;
     protected JavascriptExecutor jsExecutor;
 
     @BeforeMethod
     public void setUp() {
-        logger.info("Started setting up driver");
+        PropertyConfigurator.configure(loggerConfPath);
+        logger.info("Started setting up the driver");
         String headless = System.getProperty("headless");
         if (headless == null) {
             headless = "";
@@ -36,7 +38,7 @@ public class BaseTest extends Base {
             driver.manage().window().maximize();
         }
         jsExecutor = (JavascriptExecutor) driver;
-        logger.info("Finished setting up driver");
+        logger.info("Finished setting up the driver");
     }
 
     @AfterMethod(alwaysRun = true)

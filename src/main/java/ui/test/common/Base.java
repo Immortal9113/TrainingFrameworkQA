@@ -1,4 +1,4 @@
-package ui.test;
+package ui.test.common;
 
 import com.google.common.io.Files;
 import io.qameta.allure.Attachment;

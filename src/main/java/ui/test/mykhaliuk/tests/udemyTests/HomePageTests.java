@@ -3,7 +3,7 @@ package ui.test.mykhaliuk.tests.udemyTests;
 import io.qameta.allure.Description;
 import org.testng.annotations.Test;
 import ui.test.mykhaliuk.pages.udemyPages.HomePage;
-import ui.test.BaseTest;
+import ui.test.common.BaseTest;
 
 
 public class HomePageTests extends BaseTest {

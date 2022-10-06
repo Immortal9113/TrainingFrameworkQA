@@ -2,7 +2,7 @@ package ui.test.mykhaliuk.elements;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import ui.test.BasePage;
+import ui.test.common.BasePage;
 
 public class HomeElements extends BasePage {
     public String SEARCH_FORM = "/html[1]/body[1]/div[1]/div[1]/div[3]/div[2]/form[1]/input[2]";
