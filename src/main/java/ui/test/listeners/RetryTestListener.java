@@ -1,4 +1,4 @@
-package ui.test.mykhaliuk.listners;
+package ui.test.listeners;
 
 import org.testng.IAnnotationTransformer;
 import org.testng.annotations.ITestAnnotation;
