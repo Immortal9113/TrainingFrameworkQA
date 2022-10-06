@@ -97,7 +97,7 @@ public class Test_list {
         System.out.println("remove Time result for LinkedList " + linkedListRem);
         System.out.println("after remove");
         System.out.println("ArrayList " + myLinkedList.size());
-//вивести всі елементи колекції
+//вивести всі елементи колекції !!!!!
         for (String mls : myLinkedList) {
 
             System.out.println(mls);
