@@ -2,7 +2,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Test Suite" parallel="tests" thread-count="2">
     <listeners>
-        <listener class-name="ui.test.mykhaliuk.listners.FailureListener"></listener>
+        <listener class-name="ui.test.listeners.FailureListener"/>
+        <listener class-name="ui.test.listeners.ExecutionTimeListener"/>
+        <listener class-name="ui.test.listeners.RetryTestListener"/>
     </listeners>
     <test name="TEST">
         <classes>

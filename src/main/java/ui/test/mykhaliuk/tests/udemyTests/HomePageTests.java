@@ -7,7 +7,7 @@ import ui.test.common.BaseTest;
 
 
 public class HomePageTests extends BaseTest {
-    public final static String homePageURL = "https://www.udemy.com/";
+    public final static String homePageURL = "https://www.udemy.coom/";
 
     @Test()
     @Description("'Java' keyword search")
