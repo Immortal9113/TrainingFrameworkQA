@@ -2,9 +2,9 @@ package ui.test.mykhaliuk.elements;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import ui.test.mykhaliuk.pages.AbstractBasePage;
+import ui.test.BasePage;
 
-public class HomeElements extends AbstractBasePage {
+public class HomeElements extends BasePage {
     public String SEARCH_FORM = "/html[1]/body[1]/div[1]/div[1]/div[3]/div[2]/form[1]/input[2]";
     public String CATEGORIES_BUTTON = "//span[contains(text(),'Categories')]";
     public String DEV_CATEGORY = "//div[@class='udlite-block-list-item-content' and text() = 'Development']";

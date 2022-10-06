@@ -6,8 +6,28 @@
   <component name="ChangeListManager">
     <list default="true" id="9e9b35e9-2a3f-4fba-a5e1-50e05f93f717" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/275416fb-38fd-49f5-b783-b8784fe0d9a3-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/3b748cf5-a721-4773-bebb-ed0acc6785ec-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/3cb159af-89bf-4255-8a51-4520c124f2e7-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/4cc454dc-aa9a-4d4a-ba3a-8371099638d8-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/5b967d81-158c-4615-84da-aeba88387a94-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/703819a3-9662-4353-b8ce-c9205c7f5de7-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/7b2c81a4-6ffe-49a4-9d8f-1eba907226f9-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/8496bb70-b3c9-4128-8b05-1ef0f6b625e5-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/ca9b956f-d3f9-4997-bf3e-b087c44b448a-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/db7d8f75-7c81-479f-a25d-0cc6d2c31c0b-result.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/def5f50f-7feb-47f9-a8cb-368bcbb694e3-container.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/allure-results/f32563de-43ac-4a9c-a13d-245667d334e8-container.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ui/Actions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/Actions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/Actions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/BaseActions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/test/mykhaliuk/common/Base.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/test/Base.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/test/mykhaliuk/elements/HomeElements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/test/mykhaliuk/elements/HomeElements.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/test/mykhaliuk/listners/TestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/test/mykhaliuk/listners/TestListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/test/mykhaliuk/pages/AbstractBasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/test/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/test/mykhaliuk/resources/suites/udemy.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/test/mykhaliuk/tests/AbstractBaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/test/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/test/mykhaliuk/tests/udemyTests/HomePageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/test/mykhaliuk/tests/udemyTests/HomePageTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,20 +53,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/38067/Dev/TrainingFrameworkQA/src/main/java/ui/test/mykhaliuk/suites",
-    "settings.editor.selected.configurable": "MavenSettings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/38067/Dev/TrainingFrameworkQA/src/main/java/ui/test/mykhaliuk/suites&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\38067\Dev\TrainingFrameworkQA\src\main\java\ui\test\mykhaliuk\suites" />
       <recent name="C:\Users\38067\Dev\TrainingFrameworkQA\src\main\java\ui\test\mykhaliuk" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\38067\Dev\TrainingFrameworkQA\src\main\java\ui\test\mykhaliuk\suites" />
       <recent name="C:\Users\38067\Dev\TrainingFrameworkQA\src\main\java\ui\test\mykhaliuk" />
     </key>
   </component>

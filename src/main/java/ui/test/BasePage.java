@@ -1,4 +1,4 @@
-package ui.test.mykhaliuk.pages;
+package ui.test;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -8,20 +8,18 @@ import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import ui.test.mykhaliuk.common.Base;
 
 import java.time.Duration;
 import java.util.List;
-import static org.testng.AssertJUnit.fail;
 
 
-public class AbstractBasePage extends Base {
+public class BasePage extends Base {
     protected final int BASE_WAIT = 15;
     protected final Logger logger;
     protected WebDriver driver;
     protected WebDriverWait wait;
 
-    protected AbstractBasePage(WebDriver driver) {
+    protected BasePage(WebDriver driver) {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(BASE_WAIT));
         this.logger = LogManager.getLogger(this.getClass());

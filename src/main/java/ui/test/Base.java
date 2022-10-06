@@ -1,4 +1,4 @@
-package ui.test.mykhaliuk.common;
+package ui.test;
 
 import com.google.common.io.Files;
 import io.qameta.allure.Attachment;
@@ -27,7 +27,7 @@ public class Base extends Assert {
     @Attachment(value = "Page screenshot", type = "image/png")
     protected byte[] captureScreen(WebDriver driver) {
         File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(screenshot, new File("./target/allure-results/screenshots//" + screenshot.getName()));
+        FileUtils.copyFile(screenshot, new File("./target/allure-results/screenshots/" + screenshot.getName()));
         return Files.toByteArray(screenshot);
     }
 }

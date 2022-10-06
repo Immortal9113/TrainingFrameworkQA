@@ -6,8 +6,8 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-import ui.test.mykhaliuk.common.Base;
-import ui.test.mykhaliuk.tests.AbstractBaseTest;
+import ui.test.Base;
+import ui.test.BaseTest;
 
 public class TestListener extends Base implements ITestListener {
 
@@ -18,7 +18,7 @@ public class TestListener extends Base implements ITestListener {
         logger.info("---------------------------------------------------------------");
         logger.info("Failed because of - " + result.getThrowable());
         logger.info("---------------------------------------------------------------");
-        WebDriver driver = ((AbstractBaseTest) result.getInstance()).getDriver();
+        WebDriver driver = ((BaseTest) result.getInstance()).getDriver();
         if (driver != null) {
             captureScreen(driver);
         }
@@ -29,7 +29,7 @@ public class TestListener extends Base implements ITestListener {
         logger.info("---------------------------------------------------------------");
         logger.info("Skipped because of - " + result.getThrowable());
         logger.info("---------------------------------------------------------------");
-        WebDriver driver = ((AbstractBaseTest) result.getInstance()).getDriver();
+        WebDriver driver = ((BaseTest) result.getInstance()).getDriver();
         if (driver != null) {
             captureScreen(driver);
         }
