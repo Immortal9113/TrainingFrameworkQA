@@ -3,12 +3,10 @@ package ui.test.mykhaliuk.tests.udemyTests;
 import io.qameta.allure.Description;
 import org.testng.annotations.Test;
 import ui.test.mykhaliuk.pages.udemyPages.HomePage;
-import ui.test.mykhaliuk.tests.AbstractBaseTest;
-
-import static org.testng.AssertJUnit.assertTrue;
+import ui.test.BaseTest;
 
 
-public class HomePageTests extends AbstractBaseTest {
+public class HomePageTests extends BaseTest {
     public final static String homePageURL = "https://www.udemy.com/";
 
     @Test()

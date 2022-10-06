@@ -1,4 +1,4 @@
-package ui.test.mykhaliuk.tests;
+package ui.test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.log4j.LogManager;
@@ -10,11 +10,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import ui.test.mykhaliuk.common.Base;
 
-public class AbstractBaseTest extends Base {
+public class BaseTest extends Base {
 
-    private final Logger logger = LogManager.getLogger(AbstractBaseTest.class);
+    private final Logger logger = LogManager.getLogger(BaseTest.class);
     protected WebDriver driver;
     protected JavascriptExecutor jsExecutor;
 
