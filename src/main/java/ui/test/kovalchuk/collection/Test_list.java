@@ -1,4 +1,4 @@
-package ui.test.kovalchuk;
+package ui.test.kovalchuk.collection;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
