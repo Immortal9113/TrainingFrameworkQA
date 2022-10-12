@@ -12,7 +12,7 @@ public class HomePageTests extends BaseTest {
     @Test()
     @Description("'Java' keyword search")
     public void searchForJava() {
-        HomePage homePage = new HomePage(driver);
+        HomePage homePage = new HomePage(driver, jsExecutor);
         openUrl(homePageURL);
         homePage.searchFor("Java");
     }
@@ -20,7 +20,7 @@ public class HomePageTests extends BaseTest {
     @Test
     @Description("opening 'Data Science' category from dropdown menu")
     public void openDataScienceCategory() {
-        HomePage homePage = new HomePage(driver);
+        HomePage homePage = new HomePage(driver, jsExecutor);
         openUrl(homePageURL);
         homePage
                 .expandCategoriesMenu()
@@ -33,7 +33,7 @@ public class HomePageTests extends BaseTest {
     @Test
     @Description("opening 'Web Development' category from dropdown menu")
     public void openWebDevCategory() {
-        HomePage homePage = new HomePage(driver);
+        HomePage homePage = new HomePage(driver, jsExecutor);
         openUrl(homePageURL);
         homePage
                 .expandCategoriesMenu()

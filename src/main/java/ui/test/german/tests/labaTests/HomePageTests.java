@@ -9,14 +9,14 @@ public class HomePageTests extends BaseTest {
 
  @Test
  public void checkBtnOnlineCourses() {
-  HomePage homePage = new HomePage(driver);
+  HomePage homePage = new HomePage(driver, jsExecutor);
   openUrl(homePageUrl);
   homePage.getClickOnlineCoursesBtn().click();
  }
 
  @Test
  public void checkLogoBtn() {
-  HomePage homePage = new HomePage(driver);
+  HomePage homePage = new HomePage(driver, jsExecutor);
   openUrl(homePageUrl);
   homePage.getClickLogo().click();
  }

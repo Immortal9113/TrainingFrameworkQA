@@ -1,18 +1,19 @@
 package ui.test.mykhaliuk.pages.udemyPages;
 
 import io.qameta.allure.Step;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import ui.test.mykhaliuk.elements.HomeElements;
+import ui.test.mykhaliuk.elements.udemyElements.HomeElements;
 
 import java.util.Objects;
 
 public class HomePage extends HomeElements {
 
-    public HomePage(WebDriver driver) {
-        super(driver);
+    public HomePage(WebDriver driver, JavascriptExecutor jsExecutor) {
+        super(driver, jsExecutor);
     }
 
     public void hoverOver(WebElement e) {

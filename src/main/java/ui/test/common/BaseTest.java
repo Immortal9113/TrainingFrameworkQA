@@ -13,10 +13,10 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 public class BaseTest extends Base {
-    String loggerConfPath = "src/main/java/ui/test/common/logger.properties";
     private final Logger logger = LogManager.getLogger(BaseTest.class);
     protected WebDriver driver;
     protected JavascriptExecutor jsExecutor;
+    String loggerConfPath = "src/main/java/ui/test/common/logger.properties";
 
     @BeforeMethod
     public void setUp() {
@@ -43,8 +43,8 @@ public class BaseTest extends Base {
 
     @AfterMethod(alwaysRun = true)
     public void tearDown() {
-        logger.info("Quite driver");
-        driver.quit();
+//        logger.info("Quite driver");
+//        driver.quit();
     }
 
     public void openUrl(String url) {

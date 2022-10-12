@@ -1,13 +1,14 @@
 package ui.test.german.elements;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import ui.test.common.*;
 
 public class HomeElements extends BasePage {
 
-    protected HomeElements(WebDriver driver) {
-        super(driver);
+    protected HomeElements(WebDriver driver, JavascriptExecutor jsExecutor) {
+        super(driver, jsExecutor);
     }
 
     public String SEARCH_BUTTON = "//span[@class='hidden-md-down']";
