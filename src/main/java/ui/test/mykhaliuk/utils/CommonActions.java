@@ -9,8 +9,9 @@ public class CommonActions {
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
         Thread.sleep(200);
     }
-
+    @SneakyThrows
     public static void openInNewTab(WebElement webElement) {
         webElement.sendKeys(Keys.CONTROL, Keys.ENTER);
+        Thread.sleep(200);
     }
 }
