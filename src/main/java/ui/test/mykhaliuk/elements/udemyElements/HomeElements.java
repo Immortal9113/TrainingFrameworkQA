@@ -1,5 +1,6 @@
-package ui.test.mykhaliuk.elements;
+package ui.test.mykhaliuk.elements.udemyElements;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import ui.test.common.BasePage;
@@ -12,8 +13,8 @@ public class HomeElements extends BasePage {
     public String DATA_SCIENCE_CATEGORY_ITEM = "//div[@class='udlite-block-list-item-content' and text() = 'Data Science']";
     public String HEADING_SMART_BAR_CLOSE_BUTTON = "//div[@data-purpose='smart-bar-container']//button[@type='button']";
 
-    public HomeElements(WebDriver driver) {
-        super(driver);
+    public HomeElements(WebDriver driver, JavascriptExecutor jsExecutor) {
+        super(driver, jsExecutor);
     }
 
     public WebElement getHeadingBarCloseButton() {
