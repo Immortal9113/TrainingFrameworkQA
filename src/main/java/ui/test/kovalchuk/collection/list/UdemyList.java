@@ -1,4 +1,4 @@
-package ui.test.kovalchuk;
+package ui.test.kovalchuk.collection.list;
 
 import java.util.ArrayList;
 

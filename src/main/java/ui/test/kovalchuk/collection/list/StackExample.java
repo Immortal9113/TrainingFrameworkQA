@@ -1,4 +1,4 @@
-package ui.test.kovalchuk.collection;
+package ui.test.kovalchuk.collection.list;
 
 public class StackExample {
     static void abc1(){
