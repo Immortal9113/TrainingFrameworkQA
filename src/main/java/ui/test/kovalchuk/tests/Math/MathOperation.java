@@ -1,4 +1,4 @@
-package ui.test.kovalchuk.tests;
+package ui.test.kovalchuk.tests.Math;
 
 public class MathOperation {
 

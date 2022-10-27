@@ -1,4 +1,4 @@
-package ui.test.kovalchuk.tests;
+package ui.test.kovalchuk.tests.Math;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
