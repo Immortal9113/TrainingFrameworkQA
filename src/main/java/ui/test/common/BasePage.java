@@ -52,6 +52,14 @@ public class BasePage extends Base {
             fail("No presence element: " + locator);
             return null;
         }
+    }protected WebElement waitPresenceOfElementLocatedById(String id) {
+        try {
+            return wait.until(ExpectedConditions.presenceOfElementLocated(By.id(id)));
+        } catch (WebDriverException e) {
+            logger.error("No presence element with id: " + id);
+            fail("No presence element with id: " + id);
+            return null;
+        }
     }
 
     protected List<WebElement> waitPresenceOfElementsLocated(String locator) {
