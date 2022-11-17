@@ -7,7 +7,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import javax.xml.xpath.XPath;
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -110,6 +112,19 @@ public class BasePage extends Base {
         } catch (Exception E) {
             logger.error("No presence of element with id: " + id);
             fail("No presence of element with id: " + id);
+            return null;
+        }
+        return null;
+    }
+    protected ArrayList<WebElement> fluentWaitElements(String XPath) {
+        try {
+            fluentWait.until(webDriver -> {
+                logger.info("Rechecking with fluent");
+                return webDriver.findElements(By.xpath(XPath));
+            });
+        } catch (Exception E) {
+            logger.error("No presence of elements: " + XPath);
+            fail("No presence of elements: " + XPath);
             return null;
         }
         return null;
