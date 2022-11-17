@@ -21,7 +21,7 @@ public class BasePage extends Base {
 
     protected BasePage(WebDriver driver, JavascriptExecutor jsExecutor) {
         this.driver = driver;
-        this.fluentWait = new FluentWait<>(driver).pollingEvery(Duration.ofSeconds(2)).ignoring(IndexOutOfBoundsException.class).withTimeout(Duration.ofSeconds(BASE_WAIT));
+        this.fluentWait = new FluentWait<>(driver).pollingEvery(Duration.ofSeconds(2)).ignoring(NoSuchElementException.class).withTimeout(Duration.ofSeconds(BASE_WAIT));
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(BASE_WAIT));
         this.logger = LogManager.getLogger(this.getClass());
         this.jsExecutor = jsExecutor;
