@@ -4,7 +4,7 @@ import org.testng.annotations.DataProvider;
 import ui.test.common.Base;
 
 public class DataProviderCredentials extends Base {
-    private final static String FIRST_NAME = "Oleksandr";
+    private final static String FIRST_NAME = "Ivan";
     private final static String LAST_NAME = "Ivanov";
     private final static String MIDDLE_NAME = "Dmitrievich";
     private final static String NUMBER = "0936192812";

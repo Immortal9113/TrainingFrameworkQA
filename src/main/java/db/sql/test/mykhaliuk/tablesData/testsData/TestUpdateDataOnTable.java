@@ -29,7 +29,7 @@ public class TestUpdateDataOnTable extends DBInit {
     @SneakyThrows
     public void updateCity() {
         DataInfo dataInfo = new DataInfo();
-        dataInfo.setCity("'LOST'", "'Lviv'");
+        dataInfo.setCity("LOST", "Lviv");
     }
 
     public void updatePrice(){

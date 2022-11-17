@@ -9,6 +9,6 @@ public class TestCreateDataOnTable extends DBInit {
     @SneakyThrows
     @Test
     public void addNewProduct() {
-        statement.executeUpdate("INSERT INTO product(ProductName, Price, Number, City) VALUES ('Tomatos', 118, 107, 'Lutsk')");
+        statement.executeUpdate("INSERT INTO product(ProductName, Price, Number, City) VALUES ('Tomatoes', 118, 107, 'Lutsk')");
     }
 }
