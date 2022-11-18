@@ -15,7 +15,7 @@ public class AmazonLoginPage extends AmazonLoginElements {
         return this;
     }
 
-    public AmazonLoginPage goTologinPage() {
+    public AmazonLoginPage goToLoginPage() {
         login().click();
         return this;
     }

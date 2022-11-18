@@ -1,5 +1,6 @@
 package ui.test.vasylenko.tests;
 
+import io.qameta.allure.Description;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import ui.test.common.BaseTest;
@@ -7,6 +8,7 @@ import ui.test.vasylenko.elements.AmazonHomeElements;
 import ui.test.vasylenko.elements.AmazonSearchResultElements;
 import ui.test.vasylenko.pages.AmazonHome;
 import ui.test.vasylenko.pages.AmazonLoginPage;
+import ui.test.vasylenko.pages.AmazonSearchResult;
 
 public class AmazonTests extends BaseTest {
 
@@ -27,10 +29,23 @@ public class AmazonTests extends BaseTest {
     public void testSearchResult(){
         openUrl(HomePageURL);
         AmazonHome amazonHome = new AmazonHome(driver, jsExecutor);
-        AmazonSearchResultElements amazonSearchResultElements = amazonHome.search("hp lepatop");
+        AmazonSearchResultElements amazonSearchResultElements = amazonHome.search("hp laptop");
 
         Assert.assertTrue(amazonSearchResultElements.getResultImg().isDisplayed());
         Assert.assertTrue(amazonSearchResultElements.searchResult().size() >10);
+    }
+
+    @Test
+    @Description("Test filters low to high prize")
+    public void testLowToHighFilter(){
+        openUrl(HomePageURL);
+        AmazonHome amazonHome = new AmazonHome(driver, jsExecutor);
+        AmazonSearchResult amazonSearchResult = new AmazonSearchResult(driver, jsExecutor);
+        amazonHome.search("keyboard");
+        amazonSearchResult.useFilterLowToHighPrize();
+
+        Assert.assertTrue(amazonSearchResult.findLowerPrize());
+
     }
 
     @Test
@@ -48,7 +63,7 @@ public class AmazonTests extends BaseTest {
 
         AmazonLoginPage amazonLoginPage = new AmazonLoginPage(driver, jsExecutor);
         amazonLoginPage
-                .goTologinPage()
+                .goToLoginPage()
                 .setLogin("123");
 
         Assert.assertTrue(amazonLoginPage.errMessage().isDisplayed());

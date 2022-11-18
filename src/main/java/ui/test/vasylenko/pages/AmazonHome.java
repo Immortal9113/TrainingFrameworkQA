@@ -18,7 +18,7 @@ public class AmazonHome extends AmazonHomeElements {
     }
 
     public AmazonHomeElements logoClick(){
-        waitClickableElementByXpath("//a[@id='nav-logo-sprites']").click();
+        getLogoImg().click();
         return this;
     }
 
