@@ -116,7 +116,7 @@ public class BasePage extends Base {
         }
         return null;
     }
-    protected ArrayList<WebElement> fluentWaitElements(String XPath) {
+    protected List<WebElement> fluentWaitElements(String XPath) {
         try {
             fluentWait.until(webDriver -> {
                 logger.info("Rechecking with fluent");
