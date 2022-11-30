@@ -26,6 +26,11 @@
                         <allure.results.directory>${project.build.directory}/allure-results
                         </allure.results.directory>
                     </systemPropertyVariables>
+                    <suiteXmlFiles>
+                        <!-- Need to pass testng.xml files as argument from command line -->
+                        <!--suppress UnresolvedMavenProperty -->
+                        <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+                    </suiteXmlFiles>
                 </configuration>
             </plugin>
         </plugins>
