@@ -26,6 +26,11 @@
                         <allure.results.directory>${project.build.directory}/allure-results
                         </allure.results.directory>
                     </systemPropertyVariables>
+                    <suiteXmlFiles>
+                        <!-- Need to pass testng.xml files as argument from command line -->
+                        <!--suppress UnresolvedMavenProperty -->
+                        <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+                    </suiteXmlFiles>
                 </configuration>
             </plugin>
         </plugins>
@@ -58,7 +63,7 @@
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
-            <version>5.2.0</version>
+            <version>5.1.1</version>
             <scope>test</scope>
         </dependency>
 
@@ -111,4 +116,5 @@
         </dependency>
 
     </dependencies>
+
 </project>

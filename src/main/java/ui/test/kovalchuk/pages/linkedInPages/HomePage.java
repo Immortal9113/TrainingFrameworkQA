@@ -2,7 +2,9 @@ package ui.test.kovalchuk.pages.linkedInPages;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import ui.test.kovalchuk.elements.linkedInElements.HomeElements;
+import ui.test.kovalchuk.utils.Actions;
 
 public class HomePage extends HomeElements {
 
@@ -12,46 +14,53 @@ public class HomePage extends HomeElements {
         super(driver, jsExecutor);
     }
 
-    public HomePage clickMessageBtn(){
+    public HomePage clickMessageBtn() {
         getBtnMessage().click();
         return this;
     }
-    public HomePage inputSearchField(String keys){
+
+    public HomePage inputSearchField(String keys) {
         getSearchField().sendKeys(keys);
         return this;
     }
-    public void clickNextBtn (){
+
+    public HomePage clickNextBtn() {
         getBtnNext().click();
+        return this;
     }
-    public HomePage clickPeopleBtn (){
+
+    public HomePage clickPeopleBtn() {
         getBtnPeople().click();
         return this;
     }
 
-    public boolean clickConnectBtn (){
+    public boolean clickConnectBtn() {
         try {
             getBtnConnect();
             return true;
-        }catch (Exception E){
+        } catch (Exception E) {
             return false;
         }
     }
-    public void clickResponseBtn (){
+
+    public void clickResponseBtn() {
         getBtnResponse().click();
     }
-    public HomePage addsConnections (int amount) {
+
+    public HomePage addsConnections(int amount) {
         for (int i = 0; i < amount; i++) {
-            if (clickConnectBtn()) {
+            if (clickConnectBtn()){
                 getBtnConnect().click();
-                this.clickResponseBtn();
+                clickResponseBtn();
                 //TODO scroll
-                this.clickNextBtn();
+                Actions.scrollDown(driver);
+                clickNextBtn();
             }else{
+                Actions.scrollDown(driver);
                 clickNextBtn();
             }
-
         }
         return this;
-}
+    }
 }
 

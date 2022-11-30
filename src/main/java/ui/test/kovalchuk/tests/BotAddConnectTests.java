@@ -1,4 +1,4 @@
-package ui.test.kovalchuk.tests.linkedInTests;
+package ui.test.kovalchuk.tests;
 
 import org.testng.annotations.Test;
 import ui.test.common.BaseTest;
@@ -20,9 +20,9 @@ public void botAddHR(){
             .enterCredentials("budimport123@gmail.com","goldgold12345")
             .clickEnterBtn();
     homePage
-            .inputSearchField("HR lead\n")
+            .inputSearchField("HR\n")
             .clickPeopleBtn()
-            .addsConnections(3);
+            .addsConnections(40);
 
 }
 

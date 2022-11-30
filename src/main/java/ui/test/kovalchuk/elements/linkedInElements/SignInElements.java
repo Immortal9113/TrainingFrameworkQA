@@ -1,4 +1,4 @@
-package ui.test.kovalchuk.elments.PariMatchElements.linkedInElements;
+package ui.test.kovalchuk.elements.linkedInElements;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;

@@ -16,5 +16,7 @@ public class HomeElements extends BasePage {
     public WebElement getSearchForm() {
         return waitClickableElementByXpath(SEARCH_FORM);
     }
-    public WebElement getSearchFirstSuggestion() { return waitClickableElementByXpath(SEARCH_FIRST_SUGGEST_LINK);}
+    public WebElement getSearchFirstSuggestion() {
+        return waitClickableElementByXpath(SEARCH_FIRST_SUGGEST_LINK);
+    }
 }
