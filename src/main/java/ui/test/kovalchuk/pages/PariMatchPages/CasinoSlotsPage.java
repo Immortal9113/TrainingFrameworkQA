@@ -14,7 +14,10 @@ public class CasinoSlotsPage extends CasinoSlotsElements {
         super(driver, jsExecutor);
     }
 
-
+public  CasinoSlotsPage goToSlotsBooks(){
+        getBtnBooks().click();
+        return this;
+}
     public CasinoSlotsPage goToSlotsAllSlots(){
         getBtnAllSlots().click();
         return this;
@@ -30,6 +33,16 @@ public class CasinoSlotsPage extends CasinoSlotsElements {
 
     public CasinoSlotsPage goToSlotsAnimals(){
         getBtnAnimals().click();
+        return this;
+    }
+
+    public CasinoSlotsPage goToSlotsCrystals(){
+        getBtnCrystals().click();;
+        return this;
+    }
+
+    public CasinoSlotsPage openAllSlots (){
+        getNvgBTN_all().click();
         return this;
     }
     //Assert.assertEquals(casinoSlotsPage.getListSlotsElements().get(15).getText(), "Juicy Fruits Sunshine Rich")
