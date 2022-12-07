@@ -68,6 +68,15 @@ public class BasePage extends Base {
             return null;
         }
     }
+    protected List<WebElement> waitElementsVisible(String xpath) {
+        try {
+            return wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(xpath)));
+        } catch (WebDriverException e) {
+            logger.error("No presence of elements: " + xpath + e);
+            fail("No presence of elements: " + xpath);
+            return null;
+        }
+    }
 
     protected List<WebElement> waitPresenceOfElementsLocated(String Xpath) {
         try {
