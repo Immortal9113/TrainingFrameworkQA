@@ -1,5 +1,6 @@
-package api.test.mykhaliuk.boredAPI;
+package api.test.mykhaliuk.boredAPI.tests;
 
+import api.test.mykhaliuk.boredAPI.BoredResponseModel;
 import api.test.mykhaliuk.boredAPI.config.BoredConfig;
 import io.restassured.response.Response;
 import org.testng.Assert;

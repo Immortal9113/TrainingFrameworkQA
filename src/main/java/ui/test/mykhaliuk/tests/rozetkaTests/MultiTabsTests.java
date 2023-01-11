@@ -1,5 +1,6 @@
 package ui.test.mykhaliuk.tests.rozetkaTests;
 
+import io.cucumber.java.en.Given;
 import io.qameta.allure.Description;
 import org.testng.annotations.Test;
 import ui.test.common.BaseTest;

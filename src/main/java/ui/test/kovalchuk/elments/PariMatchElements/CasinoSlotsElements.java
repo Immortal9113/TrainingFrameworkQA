@@ -59,7 +59,7 @@ public class CasinoSlotsElements extends BasePage {
     }
 
     public WebElement getCategory(String category) {
-        sleep(5000);
+        sleep(7000);
         List<WebElement> elements = waitPresenceOfElementsLocated(CATEGORIES_LINKS);
         List<WebElement> elementSpans = waitPresenceOfElementsLocated(CATEGORIES_SPAN);
         for (int i = 0; i < elementSpans.size(); i++) {
@@ -67,11 +67,9 @@ public class CasinoSlotsElements extends BasePage {
             if (elementSpans.get(i).getText().equals(category)) return elements.get(i);
         }
         return null;
-//                System.out.println(category + " Wrong category " + elementSpans.get(i).getText());
     }
 
     public List<WebElement> getListSlotsElements() {
-
         return waitPresenceOfElementsLocated(SLOTS_LIST);
     }
 
