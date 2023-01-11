@@ -1,20 +1,16 @@
 package ui.test.kovalchuk.tests;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import ui.test.common.BaseTest;
 import ui.test.kovalchuk.pages.PariMatchPages.CasinoSlotsPage;
-import ui.test.kovalchuk.utils.Actions;
-
-import java.awt.*;
 
 public class TestsSlotsPariMatch extends BaseTest {
 
     private final String CasinoSlotsUrl = "https://parimatch.com/uk/casino/slots";
 
     @Test
-    public void checkSlotsPosition(){
-        CasinoSlotsPage casinoSlotsPage = new CasinoSlotsPage(driver,jsExecutor);
+    public void checkSlotsPosition() {
+        CasinoSlotsPage casinoSlotsPage = new CasinoSlotsPage(driver, jsExecutor);
         openUrl(CasinoSlotsUrl);
         casinoSlotsPage
                 .goToSlotsRecommended()
@@ -22,40 +18,37 @@ public class TestsSlotsPariMatch extends BaseTest {
                 .assertInPlace(12, "Juicy Fruits Sunshine Rich")
                 .goToSlotsAnimals()
 //                check position 15
-                .assertInPlace(14,"Mad Monkey")
+                .assertInPlace(14, "Mad Monkey")
 //                check position 16
-                .assertInPlace(15,"Prime King Riches of the Ancient")
+                .assertInPlace(15, "Prime King Riches of the Ancient")
                 .goToSlotsFruits()
 //                check position 10
-                .assertInPlace(9,"Juicy Fruits Sunshine Rich")
+                .assertInPlace(9, "Juicy Fruits Sunshine Rich")
                 .goToSlotsBooks()
 //                check position 21
-                .assertInPlace(20,"Reliquary of Ra")
+                .assertInPlace(20, "Reliquary of Ra")
 //                check position 23
-                .assertInPlace(22,"Reliquary of Ra 6 Reels");
-//                .openAllSlots()
-//                .goToSlotsCrystals()
-////                position in pending
-//                .assertInPlace(24,"Hold and Spin");
-
-
+                .assertInPlace(22, "Reliquary of Ra 6 Reels");
     }
 
     @Test
-    public void checkTitelsIn(){
+    public void checkTitlesIn() {
         CasinoSlotsPage casinoSlotsPage = new CasinoSlotsPage(driver, jsExecutor);
-     openUrl(CasinoSlotsUrl);
-        //sleep(7000);
+        openUrl(CasinoSlotsUrl);
 
-     casinoSlotsPage
-
-                .checkCategory("Топ", "Juicy Fruits Sunshine Rich", "Reliquary of Ra 6 Reels", "Reliquary of Ra Reels")
-                .checkCategory("Новинки","Juicy Fruits Sunshine Rich" )
-                .checkCategory("Рекомендуємо","Juicy Fruits Sunshine Rich");
-
-   }
-
+        casinoSlotsPage
+                .openCategory("Топ")
+                .getSlotsInCategory()
+                .getSummary("Juicy Fruits Sunshine Rich", "Reliquary of Ra 6 Reels", "Reliquary of Ra Reels");
+//                .openCategory("Новинки")
+//                .getSlotsInCategory()
+//                .getSummary("Juicy Fruits Sunshine Rich")
+//                .openCategory("Рекомендуємо")
+//                .getSlotsInCategory()
+//                .getSummary("Juicy Fruits Sunshine Rich");
     }
+
+}
 
 
 

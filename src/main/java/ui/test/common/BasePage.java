@@ -7,9 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import javax.xml.xpath.XPath;
 import java.time.Duration;
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -68,6 +66,7 @@ public class BasePage extends Base {
             return null;
         }
     }
+
     protected List<WebElement> waitElementsVisible(String xpath) {
         try {
             return wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(xpath)));
@@ -125,6 +124,7 @@ public class BasePage extends Base {
         }
         return null;
     }
+
     protected List<WebElement> fluentWaitElements(String XPath) {
         try {
             fluentWait.until(webDriver -> {

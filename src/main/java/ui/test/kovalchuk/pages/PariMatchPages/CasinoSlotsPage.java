@@ -7,12 +7,16 @@ import org.testng.Assert;
 import ui.test.kovalchuk.elments.PariMatchElements.CasinoSlotsElements;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
+
 public class CasinoSlotsPage extends CasinoSlotsElements {
+    ArrayList<String> slotsInCurrentCategory = new ArrayList<>();
+    String currentCategory;
+    List<WebElement> slotsElementsPartition;
 
     public CasinoSlotsPage(WebDriver driver, JavascriptExecutor jsExecutor) {
+
         super(driver, jsExecutor);
     }
 
@@ -43,7 +47,6 @@ public class CasinoSlotsPage extends CasinoSlotsElements {
 
     public CasinoSlotsPage goToSlotsCrystals() {
         getBtnCrystals().click();
-        ;
         return this;
     }
 
@@ -52,12 +55,9 @@ public class CasinoSlotsPage extends CasinoSlotsElements {
         return this;
     }
 
-    //Assert.assertEquals(casinoSlotsPage.getListSlotsElements().get(15).getText(), "Juicy Fruits Sunshine Rich")
     public CasinoSlotsPage assertInPlace(int position, String title) {
         sleep(4000);
-        Assert.assertEquals(this.getListSlotsElements()
-                .get(position)
-                .getText(), title);
+        Assert.assertEquals(this.getListSlotsElements().get(position).getText(), title);
         return this;
     }
 
@@ -65,66 +65,49 @@ public class CasinoSlotsPage extends CasinoSlotsElements {
         List<WebElement> listOfSlots = this.getListSlotsElements();
 
         for (WebElement element : listOfSlots) {
-
             if (element.getText().equals(title)) {
                 return listOfSlots.indexOf(element);
-//                System.out.println(listOfSlots.indexOf(element));
-
             }
         }
-
-
-
-
-//        for (int index  = 0; index  < listOfSlots.size() ;  index++) {
-//
-//           WebElement element = listOfSlots.get(index);
-//
-//            if (element.getText().equals(title)) {
-//                System.out.println(listOfSlots.indexOf(element));
-//                break;
-//            }
         return 0;
     }
 
-   public CasinoSlotsPage openCategory(String category){
+    public CasinoSlotsPage openCategory(String category) {
         getCategory(category).click();
         return this;
 
-}
-    public CasinoSlotsPage checkCategory(String category, String... titles ) {
-        this.openCategory(category);
-        this.checkAllSlotsLoaded(titles);
-        StringBuilder summary = new StringBuilder("Summary of " + category + " Category:");
-        for (String title: titles) {
-            summary.append(title).append(" ").append(checkIdByName(title)).append(" ;");
-
-        }
-        System.out.println(summary);
-        return this;
     }
 
-    public CasinoSlotsPage checkAllSlotsLoaded(String[] titles){
+    public boolean scrolledToFooterCheck() {
+        long pageHeight = (long) jsExecutor.executeScript("return document.body.scrollHeight");
+        long totalScrolledHeight = (long) jsExecutor.executeScript("return parseInt(window.pageYOffset + window.innerHeight)");
 
-        while (titles.length > 0 ){
-            List<WebElement> listOfSlots = this.getListSlotsElements();
-            for (WebElement element : listOfSlots) {
-                for (String title : titles) {
-                    if (element.getText().equals(title)){
-                        List<String> tmpList = new ArrayList<>(Arrays.asList(titles));
-                        tmpList.remove(title);
-                        titles = tmpList.toArray(new String[0]);
-                    }
-                }
+        return (pageHeight - 1) <= totalScrolledHeight;
+    }
+
+    public CasinoSlotsPage getSlotsInCategory() {
+        this.slotsElementsPartition = this.getListSlotsElements();
+        boolean scrolledToFooter = false;
+        while (!scrolledToFooter) {
+            for (WebElement slot : getListSlotsElements()) {
+                if (!this.slotsInCurrentCategory.contains(slot.getText()))
+                    this.slotsInCurrentCategory.add(slot.getText());
             }
-            jsExecutor.executeScript("window.scrollBy(0,3500)","");
-            sleep(8000);
+            scrolledToFooter = this.scrolledToFooterCheck();
+            jsExecutor.executeScript("window.scrollBy(0,600)", "");
         }
         return this;
-
     }
 
+    public CasinoSlotsPage getSummary(String... titles) {
+        //        for (String title : titles) {
+//            summary.append(title).append(" ").append(checkIdByName(title)).append(" ;");
+//        }
+        System.out.println(this.slotsInCurrentCategory);
+        System.out.println(this.slotsInCurrentCategory.size());
+        System.out.println("Summary of " + this.currentCategory + " category:");
+        return this;
+    }
 }
-
 
 

@@ -15,6 +15,8 @@ public class TestCreateTab extends DBInit {
         statement.executeUpdate("CREATE TABLE Product (" +
                 "ProductId INT PRIMARY KEY AUTO_INCREMENT, " +
                 "ProductName VARCHAR(20), " +
-                "Price INT, Number INT, City VARCHAR (10))");
+                "Price INT, " +
+                "Number INT, " +
+                "City VARCHAR (10))");
     }
 }
